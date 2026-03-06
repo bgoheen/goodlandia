@@ -143,7 +143,7 @@
       <div class="calc-widget reveal" id="mortgage-calc">
         <div class="form-group">
           <label for="calc-price">Home price</label>
-          <input type="text" id="calc-price" placeholder="300,000" inputmode="numeric">
+          <input type="text" id="calc-price" value="300000" inputmode="numeric">
         </div>
         <div class="form-group">
           <label for="calc-down">Down payment (%)</label>
@@ -254,16 +254,6 @@
 
         <div class="faq-item">
           <button class="faq-question">
-            Do I pay your commission as the buyer?
-            <span class="faq-icon">+</span>
-          </button>
-          <div class="faq-answer">
-            <p>In most transactions, the seller pays both the listing agent's and buyer's agent's commissions. There are some situations where this can vary, and I'll always be upfront about how it works before we start looking at homes together.</p>
-          </div>
-        </div>
-
-        <div class="faq-item">
-          <button class="faq-question">
             How does your appraisal background help me as a buyer?
             <span class="faq-icon">+</span>
           </button>
@@ -314,42 +304,51 @@
   <script>
     /* Mortgage Calculator */
     (function() {
-      const $ = id => document.getElementById(id);
-      const fields = ['calc-price','calc-down','calc-rate','calc-term'];
+      function getEl(id) { return document.getElementById(id); }
 
-      function calc() {
-        const price = parseFloat($('calc-price').value.replace(/[^0-9.]/g,'')) || 0;
-        const downPct = parseFloat($('calc-down').value) || 0;
-        const rate = parseFloat($('calc-rate').value) || 0;
-        const years = parseInt($('calc-term').value) || 30;
+      function calculate() {
+        var priceEl = getEl('calc-price');
+        var downEl = getEl('calc-down');
+        var rateEl = getEl('calc-rate');
+        var termEl = getEl('calc-term');
+        var outputEl = getEl('calc-output');
 
-        const loan = price * (1 - downPct / 100);
-        const r = rate / 100 / 12;
-        const n = years * 12;
+        if (!priceEl || !downEl || !rateEl || !termEl || !outputEl) return;
 
-        let payment = 0;
+        var price = parseFloat(priceEl.value.replace(/[^0-9.]/g, '')) || 0;
+        var downPct = parseFloat(downEl.value) || 0;
+        var rate = parseFloat(rateEl.value) || 0;
+        var years = parseInt(termEl.value, 10) || 30;
+
+        var loan = price * (1 - downPct / 100);
+        var r = rate / 100 / 12;
+        var n = years * 12;
+
+        var payment = 0;
         if (r > 0 && loan > 0) {
-          payment = loan * (r * Math.pow(1+r,n)) / (Math.pow(1+r,n) - 1);
+          payment = loan * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
         }
-        $('calc-output').textContent = '$' + Math.round(payment).toLocaleString();
+        outputEl.textContent = '$' + Math.round(payment).toLocaleString('en-US');
       }
 
-      fields.forEach(id => {
-        const el = $(id);
-        if (el) el.addEventListener('input', calc);
+      ['calc-price', 'calc-down', 'calc-rate', 'calc-term'].forEach(function(id) {
+        var el = getEl(id);
+        if (el) {
+          el.addEventListener('input', calculate);
+          el.addEventListener('change', calculate);
+        }
       });
 
-      calc();
+      // Run on load
+      calculate();
     })();
 
     /* FAQ Accordion */
-    document.querySelectorAll('.faq-question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const item = btn.closest('.faq-item');
-        const wasOpen = item.classList.contains('open');
-        // Close all
-        document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
-        // Toggle clicked
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.faq-item');
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
         if (!wasOpen) item.classList.add('open');
       });
     });

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sell Your Home in St. Paul | goodlandia</title>
+  <meta name="description" content="Sell your St. Paul home with an agent who prices it right the first time. 20+ years of appraisal experience means data-backed pricing, not guesswork.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">goodlandia</a>
+      <nav>
+        <ul class="nav-desktop">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="buy.html">Buy</a></li>
+          <li><a href="sell.html" class="active">Sell</a></li>
+          <li><a href="neighborhoods/midway.html">Neighborhoods</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html" class="btn btn-primary" style="padding:0.55rem 1.4rem; font-size:0.85rem;">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <ul class="nav-mobile">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="buy.html">Buy</a></li>
+    <li><a href="sell.html">Sell</a></li>
+    <li><a href="neighborhoods/midway.html">Neighborhoods</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+
+  <!-- ============ PAGE HERO ============ -->
+  <section class="page-hero">
+    <div class="container">
+      <h1>Sell Your St.&nbsp;Paul Home for What It's Actually Worth</h1>
+      <p class="page-intro">Most agents pick a list price based on gut feeling and what you want to hear. I use the same comparable sales analysis that appraisers and banks rely on. The result: your home is priced right from day one.</p>
+    </div>
+  </section>
+
+
+  <!-- ============ HOW SELLING WORKS — 4 STEPS ============ -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="text-center reveal" style="max-width:700px; margin-left:auto; margin-right:auto;">
+        <p class="section-label">How It Works</p>
+        <h2 class="section-heading">Four steps from conversation to closing</h2>
+      </div>
+
+      <div class="timeline reveal">
+        <div class="timeline-step">
+          <span class="step-number">1</span>
+          <h3>Pricing consultation</h3>
+          <p>We start with a real conversation about your goals, timeline, and what comes next. Then I run a full comparable sales analysis of your home, the same process I use as a licensed appraiser. You'll see the data and understand exactly how I arrive at a recommended price range. No inflated numbers to win your listing.</p>
+        </div>
+        <div class="timeline-step">
+          <span class="step-number">2</span>
+          <h3>Prep that moves the needle</h3>
+          <p>Not every project is worth the money. I'll walk through your home and give you a focused list of what to tackle and what to skip. Sometimes it's a deep clean and fresh paint. Sometimes it's even less than that. The goal is maximum return for minimum spend. If you need a handyperson, painter, or stager, I have people I trust.</p>
+        </div>
+        <div class="timeline-step">
+          <span class="step-number">3</span>
+          <h3>Launch and market</h3>
+          <p>Professional photos, a compelling listing description, and strategic timing. Your home goes live with a clear pricing strategy designed to generate strong interest. I'll keep you updated on showing feedback and any shifts in the market as they happen.</p>
+        </div>
+        <div class="timeline-step">
+          <span class="step-number">4</span>
+          <h3>Offers through closing</h3>
+          <p>When offers come in, I'll break down each one in plain terms so you can compare them clearly. I handle negotiations, inspection requests, and all the paperwork through closing day. You'll know what's happening at every step.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ HOME VALUE FORM ============ -->
+  <section class="lead-section">
+    <div class="container">
+      <div class="text-center reveal" style="max-width:700px; margin-left:auto; margin-right:auto;">
+        <p class="section-label">What's Your Home Worth?</p>
+        <h2>Request your home value range</h2>
+        <p class="section-intro" style="color: var(--color-muted);">I'll pull recent sales data for your neighborhood and send you an honest price range, not a Zestimate, not a number designed to get you to sign a listing agreement. Just the real range based on actual comparable sales.</p>
+      </div>
+
+      <form class="lead-form reveal" action="https://formspree.io/f/YOUR_ID" method="POST">
+        <input type="hidden" name="_subject" value="Home value request from goodlandia.com">
+        <div class="form-group">
+          <label for="sell-name">Name</label>
+          <input type="text" id="sell-name" name="name" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label for="sell-email">Email</label>
+          <input type="email" id="sell-email" name="email" placeholder="you@email.com" required>
+        </div>
+        <div class="form-group">
+          <label for="sell-phone">Phone (optional)</label>
+          <input type="tel" id="sell-phone" name="phone" placeholder="(651) 555-1234">
+        </div>
+        <div class="form-group">
+          <label for="sell-address">Property address</label>
+          <input type="text" id="sell-address" name="address" placeholder="123 Grand Ave, St. Paul" required>
+        </div>
+        <div class="form-group">
+          <label for="sell-timeline">When are you thinking of selling?</label>
+          <select id="sell-timeline" name="timeline">
+            <option value="">Select a timeframe</option>
+            <option value="asap">As soon as possible</option>
+            <option value="1-3months">1 to 3 months</option>
+            <option value="3-6months">3 to 6 months</option>
+            <option value="6-12months">6 to 12 months</option>
+            <option value="justcurious">Just curious about value</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="sell-notes">Anything else I should know?</label>
+          <textarea id="sell-notes" name="notes" placeholder="Recent updates, concerns, your situation..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send Me My Home Value Range</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- ============ FAQ ============ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="text-center reveal" style="max-width:700px; margin-left:auto; margin-right:auto;">
+        <p class="section-label">Common Questions</p>
+        <h2 class="section-heading">Selling a home in St. Paul</h2>
+      </div>
+
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-question">
+            How do you determine the list price?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>I run a comparable sales analysis using the same methodology I use as a licensed appraiser. That means I look at recent sales of similar homes in your area, adjust for differences in size, condition, and features, and arrive at a defensible price range. It's the same process banks use when deciding whether to approve a mortgage.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            When is the best time to list in St. Paul?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Spring and summer bring more buyers but also more competition from other sellers. Fall and winter have less inventory, which can work in your favor. The honest answer: the best time to list is when your home is ready and the timing works for your life. I can show you seasonal data for your specific neighborhood so you can decide with real numbers.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How long does it take to sell?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>It depends on the neighborhood, price point, and condition, but homes in St. Paul that are priced correctly are typically selling within a couple of weeks right now. A home that sits on the market for 30+ days usually has a pricing problem, not a marketing problem. That's exactly why accurate pricing from day one matters so much.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How should I prepare my home for the market?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Start with decluttering and a deep clean. Beyond that, I'll walk through your home and give you a specific list based on what buyers in your neighborhood expect. Not every project adds value. I've seen sellers spend $15,000 on a kitchen update that added $5,000 to the sale price. I'll be honest about what's worth doing and what's not.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What does it cost to sell?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>The biggest cost is typically the agent commissions. Beyond that, you may have some prep expenses (paint, cleaning, minor repairs), and there are closing costs like title fees and state deed tax. I'll give you a clear net sheet early in the process so you know what you'll walk away with after everything is paid.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Will the appraisal match the sale price?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>This is where my background really helps. Because I price homes using the same methodology appraisers use, there's a much lower chance of a surprise low appraisal. If the buyer's lender orders an appraisal and it comes in below the contract price, I know exactly how to respond because I speak that language every day.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ CTA STRIP ============ -->
+  <section class="contact-strip">
+    <div class="container">
+      <div class="text-center reveal" style="max-width:700px; margin-left:auto; margin-right:auto;">
+        <p class="section-label">Ready?</p>
+        <h2 class="section-heading">Let's talk about your home</h2>
+        <p class="section-intro">No pressure, no listing presentation. Just an honest conversation about your home, your goals, and what the numbers say.</p>
+      </div>
+      <div class="contact-methods reveal">
+        <a href="tel:+16515054400" class="contact-method">
+          <span class="method-icon">&#128222;</span>
+          <span class="method-label">Call</span>
+          <span class="method-detail">(651) 505-4400</span>
+        </a>
+        <a href="sms:+16515054400" class="contact-method">
+          <span class="method-icon">&#128172;</span>
+          <span class="method-label">Text</span>
+          <span class="method-detail">(651) 505-4400</span>
+        </a>
+        <a href="mailto:hello@goodlandia.com" class="contact-method">
+          <span class="method-icon">&#9993;</span>
+          <span class="method-label">Email</span>
+          <span class="method-detail">hello@goodlandia.com</span>
+        </a>
+        <a href="contact.html" class="contact-method">
+          <span class="method-icon">&#128197;</span>
+          <span class="method-label">Schedule</span>
+          <span class="method-detail">Book a call</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-logo">goodlandia</div>
+      <ul class="footer-nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="buy.html">Buy</a></li>
+        <li><a href="sell.html">Sell</a></li>
+        <li><a href="neighborhoods/midway.html">Neighborhoods</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <p class="footer-legal">&copy; 2026 goodlandia. Licensed in Minnesota.</p>
+    </div>
+  </footer>
+
+
+  <!-- ============ STICKY MOBILE BAR ============ -->
+  <div class="mobile-bar">
+    <a href="tel:+16515054400">
+      <span class="bar-icon">&#128222;</span> Call
+    </a>
+    <a href="sms:+16515054400">
+      <span class="bar-icon">&#128172;</span> Text
+    </a>
+    <a href="mailto:hello@goodlandia.com">
+      <span class="bar-icon">&#9993;</span> Email
+    </a>
+    <a href="#" onclick="document.querySelector('.nav-toggle').click(); return false;">
+      <span class="bar-icon">&#9776;</span> Menu
+    </a>
+  </div>
+
+
+  <script src="main.js"></script>
+  <script>
+    /* FAQ Accordion */
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.faq-item');
+        var wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(i) { i.classList.remove('open'); });
+        if (!wasOpen) item.classList.add('open');
+      });
+    });
+  </script>
+</body>
+</html>
