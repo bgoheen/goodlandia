@@ -5,18 +5,19 @@
    ============================================== */
 
 :root {
-  /* Palette — navy + teal accent, clean and vibrant */
+  /* Palette — exact metrowide.co colors */
   --color-bg:         #F8F9FA;
   --color-white:      #FFFFFF;
   --color-light:      #F0F2F4;
   --color-border:     #E2E5E9;
-  --color-muted:      #CBD0D6;
-  --color-navy:       #1B2A4A;
-  --color-navy-deep:  #111D35;
-  --color-teal:       #2AA68E;
-  --color-teal-dark:  #228B76;
-  --color-teal-light: #E6F6F2;
-  --color-coral:      #E8664A;
+  --color-muted:      #A0AABB;
+  --color-navy:       #050C1C;
+  --color-navy-deep:  #050C1C;
+  --color-teal:       #7EF9FF;
+  --color-teal-dark:  #5CD6DC;
+  --color-teal-light: #E8FDFE;
+  --color-pink:       #FF5CF0;
+  --color-pink-dark:  #D94FCC;
   --color-gold:       #F0B95B;
   --color-text:       #1E293B;
   --color-text-light: #64748B;
@@ -56,8 +57,8 @@ body {
 @media (min-width: 768px) { body { padding-bottom: 0; } }
 
 img { max-width: 100%; height: auto; display: block; }
-a   { color: var(--color-teal); text-decoration: none; transition: color 0.25s var(--ease); }
-a:hover { color: var(--color-teal-dark); }
+a   { color: var(--color-teal-dark); text-decoration: none; transition: color 0.25s var(--ease); }
+a:hover { color: var(--color-pink); }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
@@ -114,36 +115,36 @@ p { max-width: 65ch; }
   text-align: center;
 }
 .btn-primary {
-  background: var(--color-teal);
+  background: var(--color-pink);
   color: var(--color-white);
-  border-color: var(--color-teal);
+  border-color: var(--color-pink);
 }
 .btn-primary:hover {
-  background: var(--color-teal-dark);
-  border-color: var(--color-teal-dark);
+  background: var(--color-pink-dark);
+  border-color: var(--color-pink-dark);
   color: var(--color-white);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(42,166,142,0.3);
+  box-shadow: 0 6px 20px rgba(255,92,240,0.3);
 }
 .btn-outline {
   background: transparent;
-  color: var(--color-teal);
-  border-color: var(--color-teal);
+  color: var(--color-navy);
+  border-color: var(--color-navy);
 }
 .btn-outline:hover {
-  background: var(--color-teal);
+  background: var(--color-navy);
   color: var(--color-white);
   transform: translateY(-2px);
 }
 .btn-warm {
-  background: var(--color-coral);
+  background: var(--color-pink);
   color: var(--color-white);
-  border-color: var(--color-coral);
+  border-color: var(--color-pink);
 }
 .btn-warm:hover {
-  background: var(--color-navy);
-  border-color: var(--color-navy);
-  color: var(--color-white);
+  background: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-navy);
   transform: translateY(-2px);
 }
 
@@ -198,12 +199,12 @@ p { max-width: 65ch; }
   position: absolute;
   bottom: -4px; left: 0;
   width: 0; height: 2px;
-  background: var(--color-teal);
+  background: var(--color-pink);
   transition: width 0.3s var(--ease);
 }
 .nav-desktop a:hover::after,
 .nav-desktop a.active::after { width: 100%; }
-.nav-desktop a:hover { color: var(--color-teal); }
+.nav-desktop a:hover { color: var(--color-pink); }
 
 .nav-toggle {
   background: none; border: none; cursor: pointer;
@@ -238,7 +239,7 @@ p { max-width: 65ch; }
   font-size: 1.8rem;
   color: var(--color-navy);
 }
-.nav-mobile a:hover { color: var(--color-teal); }
+.nav-mobile a:hover { color: var(--color-pink); }
 
 @media (min-width: 768px) {
   .nav-desktop { display: flex; }
@@ -258,8 +259,8 @@ p { max-width: 65ch; }
   overflow: hidden;
   background: var(--color-navy-deep);
   background-image:
-    radial-gradient(ellipse at 25% 40%, rgba(42,166,142,0.12) 0%, transparent 55%),
-    radial-gradient(ellipse at 75% 60%, rgba(232,102,74,0.08) 0%, transparent 55%);
+    radial-gradient(ellipse at 25% 40%, rgba(126,249,255,0.08) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 60%, rgba(255,92,240,0.06) 0%, transparent 55%);
 }
 .hero::before {
   content: '';
@@ -304,7 +305,7 @@ section { padding: var(--space-xl) 0; }
   font-size: 0.8rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--color-teal);
+  color: var(--color-pink);
   margin-bottom: var(--space-xs);
 }
 .section-heading { margin-bottom: var(--space-md); }
@@ -357,7 +358,7 @@ section { padding: var(--space-xl) 0; }
   left: 0; top: 0.55em;
   width: 7px; height: 7px;
   border-radius: 50%;
-  background: var(--color-teal);
+  background: var(--color-pink);
 }
 
 @media (min-width: 700px) {
